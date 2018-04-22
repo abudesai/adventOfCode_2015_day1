@@ -2,5 +2,5 @@
 
 Advent of Code 2015 Problem -  Santa - Day 1 (for Andrei Neagoie's Web Dev course on Udemy)
 
-For problem details, see (https://adventofcode.com/2015/day/1). 
+For problem details, see [here](https://adventofcode.com/2015/day/1). 
 
