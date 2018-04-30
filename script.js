@@ -33,8 +33,20 @@ var currFloorNum = 0;
 for (i=0; currFloorNum > -0.1; i++) {
 	currFloorNum += 40.5 - file[i];
 }
+
 console.timeEnd('exercise_2_time');
 console.log('Santa got to the basement at instruction #:', i)
+
+//the above code assumed that the instructions will take Santa to
+//to the basement at some time during the instructions. If assumption is invalid
+//then we need the following if/else statement
+
+// if (i == file.length && currFloorNum > -0.1) {
+// 	console.log('Basement never reached!')
+// } else {
+// 	console.log('Santa got to the basement at instruction #:', i)
+// }
+
 
 //------------------------------------------------------------------------------------------
 
