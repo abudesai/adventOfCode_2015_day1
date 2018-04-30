@@ -28,6 +28,7 @@ console.log('\n');
 
 //------------------------------------------------------------------------------------------
 /*************************************** EXERCISE-2 ***************************************/
+
 console.time('exercise_2_time');
 var currFloorNum = 0;
 for (i=0; currFloorNum > -0.1; i++) {
@@ -39,13 +40,14 @@ console.log('Santa got to the basement at instruction #:', i)
 
 //the above code assumed that the instructions will take Santa to
 //to the basement at some time during the instructions. If assumption is invalid
-//then we need the following if/else statement
+//then we need the following if/else statement:
 
-// if (i == file.length && currFloorNum > -0.1) {
+// if (i == (file.length+1)) {
 // 	console.log('Basement never reached!')
 // } else {
 // 	console.log('Santa got to the basement at instruction #:', i)
 // }
+
 
 
 //------------------------------------------------------------------------------------------
