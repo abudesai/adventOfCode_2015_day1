@@ -12,8 +12,8 @@ Exercise1:
 
 Exercise2: (inside the 'for' loop)
 	currFloorNum += 40.5 - currInstrVal
-currInstrVal is 40 if up, 41 if down
-bails out of the loop after reaching the basement the first time
+currInstrVal is 40 if up, 41 if down.
+Code bails out of the loop after reaching the basement the first time
 
 */
 //------------------------------------------------------------------------------------------
