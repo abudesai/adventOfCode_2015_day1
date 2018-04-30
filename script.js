@@ -1,27 +1,40 @@
 
 const fs = require('fs');
+const file = fs.readFileSync('./SantaFile.txt');
+// console.log(file[0])
 //------------------------------------------------------------------------------------------
 /*
 open paren: 40
 close paren: 41
-num_floors = 2 * (# of chars * 40.5 - (# of ups * 40 + # of downs * 41))
+
+Exercise1:
+	floorReached = 2 * (# of chars * 40.5 - (# of ups * 40 + # of downs * 41))
+
+Exercise2: (inside the 'for' loop)
+	currFloorNum += 40.5 - currInstrVal
+currInstrVal is 40 if up, 41 if down
+bails out of the loop after reaching the basement the first time
+
 */
+//------------------------------------------------------------------------------------------
+/*************************************** EXERCISE-1 ***************************************/
+
+console.time('exercise_1_time');
+let floorReached = 2*(file.length * 40.5 - (file.reduce((acc, obj) => acc + obj, 0)))
+console.timeEnd('exercise_1_time');
+
+console.log('The instructions take Santa to floor #:', floorReached);
+console.log('\n');
 
 //------------------------------------------------------------------------------------------
-const file = fs.readFileSync('./SantaFile.txt');
-console.time('my_timer');
-let floorNum = 2 * (file.length * 40.5 - (file.reduce((acc, obj) => acc + obj, 0)))
-console.timeEnd('my_timer');
-console.log('Floor #:', floorNum);
+/*************************************** EXERCISE-2 ***************************************/
+console.time('exercise_2_time');
+var currFloorNum = 0;
+for (i=0; currFloorNum > -0.1; i++) {
+	currFloorNum += 40.5 - file[i];
+}
+console.timeEnd('exercise_2_time');
+console.log('Santa got to the basement at instruction #:', i)
 
 //------------------------------------------------------------------------------------------
 
-// fs.readFile('./SantaFile.txt', (err, file) => {
-// 	if (err) throw err;
-
-// 	console.time('my_timer2');
-// 	let floorNum = 2 * (file.length * 40.5 - (file.reduce((acc, obj) => acc + obj, 0)))
-// 	console.timeEnd('my_timer2');
-
-// 	console.log('Floor #:', floorNum);
-// })
